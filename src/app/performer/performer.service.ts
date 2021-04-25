@@ -8,7 +8,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class PerformerService {
-  private apiUrl:string = environment.baseUrl + 'performers';
+  private apiUrl:string = environment.baseUrl + 'musicians';
   constructor(private http: HttpClient) { }
   getPerformer(): Observable<Array<Performer>> {
     console.log(`Url back: ${this.apiUrl}`);

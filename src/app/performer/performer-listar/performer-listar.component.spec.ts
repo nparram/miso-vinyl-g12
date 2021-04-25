@@ -50,7 +50,7 @@ describe("PerformerListarComponent", () => {
   it("Should have an figcaption element ", () => {
    /* expect(debug.query(By.css("figcaption")).nativeElement.innerText).toContain(
       component.performers[0].name
-    ); */  /* Revisar este tema por que esta fallando */
+    ); */  /* Esto debemos revisarlo */
 
     /*expect(debug.query(By.css("figcaption")).nativeElement.innerText).toContain(
       component.books[0].editorial.name
