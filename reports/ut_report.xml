@@ -1,7 +1,11 @@
 <testExecutions version="1">
   <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should render title" duration="367"/>
-    <testCase name="AppComponent should create the app" duration="64"/>
-    <testCase name="AppComponent should have as title 'front'" duration="37"/>
+    <testCase name="AppComponent should render title" duration="361"/>
+    <testCase name="AppComponent should have as title 'front'" duration="124"/>
+    <testCase name="AppComponent should create the app" duration="44"/>
+  </file>
+  <file path="src/app/album/album.service.spec.ts">
+    <testCase name="Service: Album should ..." duration="20"/>
+    <testCase name="Service: Album getAlbums() should return 10 records" duration="24"/>
   </file>
 </testExecutions>
