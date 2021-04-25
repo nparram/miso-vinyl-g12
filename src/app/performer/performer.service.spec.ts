@@ -17,7 +17,7 @@ describe("Service: Book", () => {
  let injector: TestBed;
  let service: PerformerService;
  let httpMock: HttpTestingController;
- let apiUrl = environment.baseUrl + "performers";
+ let apiUrl = environment.baseUrl + "musicians";
 
  beforeEach(() => {
    TestBed.configureTestingModule({
