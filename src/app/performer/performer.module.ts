@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PerformerComponent } from './performer.component';
+import { PerformerListarComponent } from './performer-listar/performer-listar.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [PerformerComponent]
+  declarations: [PerformerListarComponent],
+  exports: [PerformerListarComponent],
 })
 export class PerformerModule { }

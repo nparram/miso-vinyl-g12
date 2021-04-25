@@ -9,7 +9,7 @@ import {
 } from '@angular/common/http/testing';
 import { environment } from "../../environments/environment";
 
-import faker from "faker";
+import * as faker from "faker";
 import { Album } from './album';
 
 describe('Service: Album', () => {

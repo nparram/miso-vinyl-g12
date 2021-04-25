@@ -1,0 +1,11 @@
+agregado el nombre de la editorial.
+<div class="container-fluid">
+  <div class="row p-5">
+      <div class="col" *ngFor="let b of albums">
+          <figure class="figure">
+              <img class="img-fluid" src='{{b.cover}}'/>
+              <figcaption class="title-caption text-center">{{b.name}}. [{{b.recordLabel}}]</figcaption>
+          </figure>
+      </div>
+  </div>
+</div>
