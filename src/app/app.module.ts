@@ -4,6 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PerformerModule } from './performer/performer.module';
+import { AlbumModule } from './album/album.module';
+import { AlbumListarComponent } from './album/album-listar/album-listar.component';
+import { AlbumComponent } from './album/album.component';
+
+import { PrizeModule } from './prize/prize.module';
+
 
 @NgModule({
   declarations: [
@@ -12,7 +18,9 @@ import { PerformerModule } from './performer/performer.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PerformerModule
+    PerformerModule,
+    AlbumModule,
+    PrizeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
