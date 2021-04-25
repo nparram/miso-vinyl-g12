@@ -1,9 +1,22 @@
+
 <div class="container-fluid">
-  <div class="col p-3">
-      <div class="col" *ngFor="let b of prizes">
+  <div class="col-2">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="h4">Prize´s Name</th>
+          <th class="h4"> </th>
+        </tr>
+      </thead>
+      <tbody>
+        <div class="col" *ngFor="let b of prizes">
           <figure class="figure">
               <figcaption class="title-caption text-center">{{b.name}}</figcaption>
           </figure>
       </div>
+      </tbody>
+    </table>
   </div>
 </div>
+
+

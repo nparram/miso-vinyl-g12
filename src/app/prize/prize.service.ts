@@ -5,9 +5,11 @@ import { Prize } from './prize';
 import { environment } from '../../environments/environment';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class PrizeService {
 
   private apiUrl = environment.baseUrl + 'prizes';
