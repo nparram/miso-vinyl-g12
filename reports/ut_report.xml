@@ -1,0 +1,10 @@
+<testExecutions version="1">
+  <file path="src/app/performer/performer.service.spec.ts">
+    <testCase name="Service: Book getPost() should return 10 records" duration="31"/>
+  </file>
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should create the app" duration="196"/>
+    <testCase name="AppComponent should have as title 'front'" duration="24"/>
+    <testCase name="AppComponent should render title" duration="26"/>
+  </file>
+</testExecutions>
