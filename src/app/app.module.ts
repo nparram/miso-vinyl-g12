@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AlbumModule } from './album/album.module';
+import { AlbumListarComponent } from './album/album-listar/album-listar.component';
+import { AlbumComponent } from './album/album.component';
 
 import { PrizeModule } from './prize/prize.module';
 
@@ -13,8 +16,9 @@ import { PrizeModule } from './prize/prize.module';
   ],
   imports: [
     BrowserModule,
-    PrizeModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AlbumModule,
+    PrizeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
