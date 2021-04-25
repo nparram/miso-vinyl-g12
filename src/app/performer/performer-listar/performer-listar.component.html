@@ -1,0 +1,11 @@
+
+<div class="container-fluid">
+  <div class="col p-5">
+      <div class="row" *ngFor="let b of performer">
+          <figure class="figure">
+             <img class="img-fluid" src='{{b.image}}'/>
+             <figcaption class="title-caption text-center">{{b.name}}</figcaption>
+          </figure>
+      </div>
+  </div>
+</div>
