@@ -5,7 +5,7 @@ import { DebugElement } from '@angular/core';
 
 import { AlbumListarComponent } from './album-listar.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { Album } from '../album';
+import { AlbumDetail } from '../albumDetail';
 import * as faker from "faker";
 
 describe('AlbumListarComponent', () => {
@@ -25,7 +25,7 @@ describe('AlbumListarComponent', () => {
     component = fixture.componentInstance;
 
     component.albums = [
-      new Album(
+      new AlbumDetail(
         faker.random.number(),
         faker.lorem.sentence(),
         faker.image.imageUrl(),
