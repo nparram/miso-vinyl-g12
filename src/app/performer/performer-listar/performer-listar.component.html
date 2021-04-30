@@ -1,5 +1,4 @@
 
-<h1>Vinyls Records</h1>
 
 <div class="container-fluid">
   <div class="col-2">
@@ -13,7 +12,7 @@
       <tbody>
         <div class="col" *ngFor="let b of performers">
           <figure class="figure">
-              <img class="img-fluid" src='{{b.image}}'/>
+              <img class="img-fluid" src='{{b.image}}'(click)="onSelected(b)"/>
               <figcaption class="title-caption text-center">{{b.name}}</figcaption>
           </figure>
       </div>
@@ -22,4 +21,11 @@
   </div>
 </div>
 
+<div class="row p-3">
+  <div class="col border">
+    <div *ngIf="selected">
+      <app-performer-detail [performerDetail]="selectedPerformer"></app-performer-detail>
+    </div>
+  </div>
+</div>
 
