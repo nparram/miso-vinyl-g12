@@ -3,11 +3,19 @@
 </p>
 <div class="container-fluid">
   <div class="col">
-      <div class="row p-5" *ngFor="let b of albums">
+      <div class="row p-5" *ngFor="let a of albums">
           <figure class="figure">
-              <img class="img-fluid" src='{{b.cover}}'/>
-              <figcaption class="title-caption text-center">{{b.name}}. [{{b.recordLabel}}]</figcaption>
+              <img class="img-fluid" src='{{a.cover}}' (click)="onSelected(a)"/>
+              <figcaption class="title-caption text-center">{{a.name}}. [{{a.recordLabel}}]</figcaption>
           </figure>
       </div>
+  </div>
+</div>
+
+<div class="row p-3">
+  <div class="col border">
+    <div *ngIf="selected">
+      <app-album-detail></app-album-detail>
+    </div>
   </div>
 </div>

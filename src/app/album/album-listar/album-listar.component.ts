@@ -9,6 +9,9 @@ import { AlbumService } from '../album.service';
 })
 export class AlbumListarComponent implements OnInit {
 
+  selected = false;
+  selectedAlbum: Album;
+
   constructor(private albumService: AlbumService) { }
 
   albums: Array<Album>;
@@ -19,8 +22,14 @@ export class AlbumListarComponent implements OnInit {
       this.albums = albums;
     });
   }
+
   ngOnInit() {
     this.getAlbums();
+  }
+
+  onSelected(album: Album): void{
+    this.selected = true;
+    this.selectedAlbum = album;
   }
 
 }

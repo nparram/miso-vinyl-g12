@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <p class="h3 p-3">{{albumDetail.name}}</p>
+  <div class="row">
+    <div class="col-2">
+      <div class="thumb">
+        <img class="img-fluid" src="{{albumDetail.cover}}" />
+      </div>
+    </div>
+    <div class="col">
+      <dl>
+        <dt> Name</dt>
+        <dd>{{albumDetail.name}}</dd>
+        <dt> Genre</dt>
+        <dd>{{albumDetail.genre}}</dd>
+        <hr>
+        <dt>Release Date</dt>
+        <dd>{{albumDetail.releaseDate}}</dd>
+        <hr>
+        <dt class="bold">Record Label</dt>
+        <dd class="caption">{{albumDetail.recordLabel}}</dd>
+        <hr>
+        <dt class="bold">Description</dt>
+        <dd>{{albumDetail.description}}</dd>
+      </dl>
+    </div>
+  </div>
+</div>
+
+
