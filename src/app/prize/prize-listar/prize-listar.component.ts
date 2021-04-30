@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Prize } from '../prize';
 import { PrizeService } from '../prize.service';
+import { PrizeDetail } from '../prizeDetail';
 
 @Component({
   selector: 'app-prize-listar',
@@ -11,8 +12,8 @@ import { PrizeService } from '../prize.service';
 export class PrizeListarComponent implements OnInit {
   constructor(private prizeService: PrizeService) { }
 
-  prizes: Array<Prize>;
-  selectedPrize: Prize;
+  prizes: Array<PrizeDetail>;
+  selectedPrize: PrizeDetail;
   selected = false;
 
   getPrizes(): void {
