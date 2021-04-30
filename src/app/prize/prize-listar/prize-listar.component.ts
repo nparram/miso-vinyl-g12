@@ -9,10 +9,11 @@ import { PrizeService } from '../prize.service';
 })
 
 export class PrizeListarComponent implements OnInit {
-
   constructor(private prizeService: PrizeService) { }
 
   prizes: Array<Prize>;
+  selectedPrize: Prize;
+  selected = false;
 
   getPrizes(): void {
     this.prizeService.getPrizes()
@@ -20,6 +21,11 @@ export class PrizeListarComponent implements OnInit {
         this.prizes = prizes;
       });
   }
+
+  onSelected(b: Prize): void {
+    this.selected = true;
+    this.selectedPrize = b;
+    }
 
   ngOnInit() {
     this.getPrizes();
