@@ -11,7 +11,7 @@
       <tbody>
         <div class="col" *ngFor="let b of prizes">
           <figure class="figure">
-              <figcaption class="title-caption text-center">{{b.name}}</figcaption>
+              <figcaption class="title-caption text-center" (click)="onSelected(b)">{{b.name}} </figcaption>
           </figure>
       </div>
       </tbody>
@@ -19,4 +19,11 @@
   </div>
 </div>
 
+<div class="row p-3">
+  <div class="col border">
+    <div *ngIf="selected">
+      <app-prize-detail [prizeDetail]="selectedPrize"></app-prize-detail>
+    </div>
+  </div>
+</div>
 
