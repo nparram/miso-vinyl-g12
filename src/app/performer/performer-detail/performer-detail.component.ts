@@ -13,7 +13,7 @@ export class PerformerDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.performerDetail.id);
+   /* console.log(this.performerDetail.id);
   }
 
 
