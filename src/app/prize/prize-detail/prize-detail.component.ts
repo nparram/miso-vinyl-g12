@@ -13,7 +13,7 @@ export class PrizeDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.prizeDetail.id);
+    //console.log(this.prizeDetail.id);
   }
 
   strToDate(premiationDate: string): Date {

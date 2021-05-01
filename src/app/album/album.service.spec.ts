@@ -44,9 +44,6 @@ describe('Service: Album', () => {
         faker.lorem.sentence(),
         faker.lorem.sentence(),
         faker.lorem.sentence(),
-        null,
-        null,
-        null
       );
 
       mockAlbums.push(album);
