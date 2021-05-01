@@ -1,25 +1,25 @@
 <div class="container-fluid">
-  <p class="h3 p-3">{{prizeDetail.name}}</p>
-  <div class="row">
-    <div class="col-2">
-      <div class="thumb">
-        <p class="h2 p-2">{{prizeDetail.description}}</p>
-      </div>
+
+
+  <dt> Organization</dt>
+      <dd>{{prizeDetail.organization}}</dd>
+
+    <div class="col">
+      <dt> Description</dt>
+      <dd>{{prizeDetail.description}}</dd>
     </div>
+
     <div class="col">
       <dl>
-        <dt> Id Prizes</dt>
+        <hr>
+        <dt> Performer Prizes Date</dt>
+        <dd *ngFor = "let a of prizeDetail.performerPrizes">{{strToDate(a.premiationDate) |date:"longDate"}}</dd>
+
+        <dt> ID</dt>
         <dd>{{prizeDetail.id}}</dd>
-        <dt> Organization</dt>
-        <dd>{{prizeDetail.organization}}</dd>
-        <hr>
-        <dt> Peerformers</dt>
-        <dd>{{prizeDetail.performerPrizes}}</dd>
-        <hr>
-        <dt class="Description">Description</dt>
-        <dd>{{prizeDetail.description}}</dd>
-        <hr>
+
       </dl>
     </div>
-  </div>
+
+
 </div>

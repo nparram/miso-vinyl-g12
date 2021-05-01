@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Prize } from '../prize';
+import { PrizeDetail } from '../prizeDetail';
 
 @Component({
   selector: 'app-prize-detail',
@@ -8,7 +8,7 @@ import { Prize } from '../prize';
 })
 export class PrizeDetailComponent implements OnInit {
 
-  @Input() prizeDetail: Prize;
+  @Input() prizeDetail: PrizeDetail;
 
   constructor() { }
 
@@ -16,6 +16,9 @@ export class PrizeDetailComponent implements OnInit {
     console.log(this.prizeDetail.id);
   }
 
-
-
+  strToDate(premiationDate: string): Date {
+    console.log(premiationDate);
+    const dateNoTime: string[] = premiationDate.split('T');
+    return new Date(dateNoTime[0]);
+  }
 }
