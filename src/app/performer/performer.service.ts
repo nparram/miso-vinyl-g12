@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Performer } from './performer';
+import { PerformerDetail } from './PerformerDetail';
 import { environment } from '../../environments/environment';
 
 @Injectable({
@@ -10,9 +10,9 @@ import { environment } from '../../environments/environment';
 export class PerformerService {
   private apiUrl:string = environment.baseUrl + 'musicians';
   constructor(private http: HttpClient) { }
-  getPerformer(): Observable<Array<Performer>> {
+  getPerformer(): Observable<Array<PerformerDetail>> {
     console.log(`Url back: ${this.apiUrl}`);
-    return this.http.get<Array<Performer>>(this.apiUrl);
+    return this.http.get<Array<PerformerDetail>>(this.apiUrl);
   }
 
 }

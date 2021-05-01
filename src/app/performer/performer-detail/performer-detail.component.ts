@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Performer } from '../performer';
+import { PerformerDetail } from '../performerDetail';
 
 @Component({
   selector: 'app-performer-detail',
@@ -8,12 +8,13 @@ import { Performer } from '../performer';
 })
 export class PerformerDetailComponent implements OnInit {
 
-  @Input() performerDetail: Performer;
+  @Input() performerDetail: PerformerDetail;
 
   constructor() { }
 
   ngOnInit() {
     console.log(this.performerDetail.id);
   }
+
 
 }

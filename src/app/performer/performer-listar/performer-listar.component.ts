@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Performer } from '../performer';
 import { PerformerService } from '../performer.service';
+import { PerformerDetail } from '../performerDetail';
 
 @Component({
   selector: 'app-performer-listar',
@@ -10,8 +11,8 @@ import { PerformerService } from '../performer.service';
 export class PerformerListarComponent implements OnInit {
   constructor(private performerService: PerformerService) { }
 
-  performers: Array<Performer>;
-  selectedPerformer: Performer;
+  performers: Array<PerformerDetail>;
+  selectedPerformer: PerformerDetail;
   selected = false;
 
   getPerformers(): void {
@@ -21,7 +22,7 @@ export class PerformerListarComponent implements OnInit {
       });
   }
 
-  onSelected(b: Performer): void {
+  onSelected(b: PerformerDetail): void {
     this.selected = true;
     this.selectedPerformer = b;
     }
