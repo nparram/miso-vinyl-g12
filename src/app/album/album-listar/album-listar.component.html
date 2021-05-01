@@ -1,21 +1,18 @@
-<p>
-  Lista de Albumes
-</p>
 <div class="container-fluid">
-  <div class="col">
-      <div class="row p-5" *ngFor="let a of albums">
-          <figure class="figure">
+  <div class="row border">
+    <div class="col-2">
+      <div class="row" *ngFor="let a of albums">
+          <figure class="figure ">
               <img class="img-fluid" src='{{a.cover}}' (click)="onSelected(a)"/>
               <figcaption class="title-caption text-center">{{a.name}}. [{{a.recordLabel}}]</figcaption>
           </figure>
       </div>
-  </div>
-</div>
-
-<div class="row p-3">
-  <div class="col border">
-    <div *ngIf="selected">
-      <app-album-detail></app-album-detail>
+    </div>
+    <div class="col-10 border">
+      <div *ngIf="selected">
+        <app-album-detail [albumDetail] = "selectedAlbum"></app-album-detail>
+      </div>
     </div>
   </div>
 </div>
+
