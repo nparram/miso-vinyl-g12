@@ -9,13 +9,13 @@ export class Album {
   recordLabel: string;
 
   constructor(
-    id: number,
-    name: string,
-    cover: string,
-    releaseDate: Date,
-    description: string,
-    genre: string,
-    recordLabel: string
+    id?: number,
+    name?: string,
+    cover?: string,
+    releaseDate?: Date,
+    description?: string,
+    genre?: string,
+    recordLabel?: string
   ){
     this.id = id;
     this.name = name;

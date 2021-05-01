@@ -12,6 +12,7 @@ export class AlbumDetail extends Album {
     performers?: Array<any>,
     comments?: Array<any>
   ){
+    super();
     this.tracks = tracks;
     this.performers = performers;
     this.comments = comments;
