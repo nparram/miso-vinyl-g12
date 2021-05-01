@@ -13,7 +13,7 @@ export class AlbumDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.albumDetail.id);
+    //console.log(this.albumDetail.id);
   }
 
 }
