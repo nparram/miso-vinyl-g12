@@ -6,8 +6,20 @@ h2 {
 }
 
 nav{
-  background-color: #76919C;
+  background-color: white;
   border: 2px solid white;
+}
+
+#albums-navbar-item{
+  color: hsl(224, 48%, 43%);
+}
+
+#performers-navbar-item{
+  color:hsl(224, 48%, 43%);
+}
+
+#prizes-navbar-item{
+  color: hsl(224, 48%, 43%);
 }
 
 h5{
@@ -19,7 +31,7 @@ h5{
 }
 
 #navbarDropdown{
-  color: rgb(12, 12, 12);
+  color: hsl(224, 48%, 43%);
 }
 
 #principal{
@@ -31,7 +43,7 @@ h5{
 }
 
 #footer {
-  background-color:#F2D7B6;
+  color: hsl(224, 48%, 43%);
   position: fixed;
   left: 0;
   bottom: 0;
