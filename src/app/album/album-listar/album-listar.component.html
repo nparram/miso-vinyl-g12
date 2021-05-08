@@ -3,7 +3,7 @@
     <div class="col-2">
       <div class="row" *ngFor="let a of albums">
           <figure class="figure ">
-              <img class="img-fluid" src='{{a.cover}}' (click)="onSelected(a)"/>
+              <img class="img-fluid" src='{{a.cover}}' (click)="onSelected(a)" alt='Cartula disco {{a.name}}'/>
               <figcaption class="title-caption text-center">{{a.name}}. [{{a.recordLabel}}]</figcaption>
           </figure>
       </div>
