@@ -12,7 +12,7 @@
       <tbody>
         <div class="col" *ngFor="let b of performers">
           <figure class="figure">
-              <img class="img-fluid" src='{{b.image}}'(click)="onSelected(b)"/>
+              <img class="img-fluid" src='{{b.image}}' alt="Foto Cantante" title = "Fotografia cantante seleccionado" (click)="onSelected(b)"/>
               <figcaption class="title-caption text-center">{{b.name}}</figcaption>
           </figure>
       </div>
