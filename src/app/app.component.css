@@ -1,0 +1,39 @@
+#cuerpo{
+  background-color: #FFC58D;
+}
+h2 {
+  color: hsl(224, 48%, 43%);
+}
+
+nav{
+  background-color: #76919C;
+  border: 2px solid white;
+}
+
+h5{
+  color:hsl(224, 48%, 43%);
+}
+
+#textWhite{
+  color:rgb(20, 17, 17);
+}
+
+#navbarDropdown{
+  color: rgb(12, 12, 12);
+}
+
+#principal{
+  background-color: #EBEFF2;
+
+}
+#secundaria {
+  background-color:#76919C;
+}
+
+#footer {
+  background-color:#F2D7B6;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
