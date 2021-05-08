@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AlbumListarComponent } from './album/album-listar/album-listar.component';
 
 const routes: Routes = [
-  { path: '', component: AlbumListarComponent }
+  { path: 'albums/list', component: AlbumListarComponent }
 ];
 
 @NgModule({
