@@ -5,11 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PerformerModule } from './performer/performer.module';
 import { AlbumModule } from './album/album.module';
-import { AlbumListarComponent } from './album/album-listar/album-listar.component';
-import { AlbumComponent } from './album/album.component';
-
+import { HttpErrorInterceptor } from './interceptors/http-error-interceptor.service'
 
 import { PrizeModule } from './prize/prize.module';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -21,9 +22,17 @@ import { PrizeModule } from './prize/prize.module';
     AppRoutingModule,
     PerformerModule,
     AlbumModule,
-    PrizeModule
+    PrizeModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpErrorInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
