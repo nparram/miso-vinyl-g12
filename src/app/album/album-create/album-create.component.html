@@ -1,3 +1,116 @@
-<p>
-  album-create works!
-</p>
+<div class="container-fluid">
+  <div class="col-4 p-3">
+    <div class="h4" >Album Creation</div>
+
+    <form
+      [formGroup]="albumForm"
+      (ngSubmit)="!albumForm.invalid && createAlbum(albumForm.value)"
+    >
+      <!-- Name -->
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="name">Name*</label>
+        <input
+          novalidate
+          id="name"
+          class="form-control"
+          formControlName="name"
+          placeholder="Album Name"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            albumForm.get('name')?.hasError('required') &&
+            albumForm.get('name')?.touched
+          "
+        >
+          Name required
+        </div>
+      </div>
+      <!-- Release date -->
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="releaseDate">releaseDate*</label>
+        <input
+          novalidate
+          id="releaseDate"
+          class="form-control"
+          formControlName="releaseDate"
+          placeholder="Release Date"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            albumForm.get('releaseDate')?.hasError('required') &&
+            albumForm.get('releaseDate')?.touched
+          "
+        >
+          Release Date required
+        </div>
+      </div>
+      <!-- Description -->
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="description">Description*</label>
+        <input
+          novalidate
+          id="description"
+          class="form-control"
+          formControlName="description"
+          placeholder="Description"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            albumForm.get('description')?.hasError('required') &&
+            albumForm.get('description')?.touched
+          "
+        >
+          Description
+        </div>
+      </div>
+      <!-- Genre -->
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="genre">Genre*</label>
+        <input
+          novalidate
+          id="genre"
+          class="form-control"
+          formControlName="genre"
+          placeholder="Genre"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            albumForm.get('genre')?.hasError('required') &&
+            albumForm.get('genre')?.touched
+          "
+        >
+          Genre
+        </div>
+      </div>
+      <!-- RecordLabel -->
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="recordLabel">Record Label*</label>
+        <input
+          novalidate
+          id="recordLabel"
+          class="form-control"
+          formControlName="recordLabel"
+          placeholder="Record Label"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            albumForm.get('recordLabel')?.hasError('required') &&
+            albumForm.get('recordLabel')?.touched
+          "
+        >
+          Record Label
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary"
+          [disabled]="!albumForm.valid" >Create</button>
+        <button type="button" class="btn btn-danger ml-3"
+          (click)="cancelCreation()" >Cancel</button>
+    </form>
+  </div>
+</div>

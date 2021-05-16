@@ -1,10 +1,14 @@
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AlbumListarComponent } from './album-listar/album-listar.component'
-import { AlbumDetailComponent } from './album-detail/album-detail.component'
+import { AlbumComponent } from './album.component';
+import { AlbumListarComponent } from './album-listar/album-listar.component';
+import { AlbumDetailComponent } from './album-detail/album-detail.component';
+import { AlbumCreateComponent } from './album-create/album-create.component';
 
 const routes: Routes = [
   {
-    path: 'albumes',
+    path: 'albums',
+    component: AlbumComponent,
     children: [
       {
         path: 'list',
@@ -13,9 +17,19 @@ const routes: Routes = [
       {
         path: ':id',
         component: AlbumDetailComponent
+      },
+      {
+        path: 'add',
+        component: AlbumCreateComponent
       }
     ]
-  },
+  }
 ];
 
-export const AlbumRoutes = RouterModule.forChild(routes);
+@NgModule({
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
+  exports: [RouterModule]
+})
+export class AlbumRoutes {}
