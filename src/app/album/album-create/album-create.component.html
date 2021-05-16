@@ -26,6 +26,26 @@
           Name required
         </div>
       </div>
+      <!-- Cover -->
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="cover">Cover*</label>
+        <input
+          novalidate
+          id="cover"
+          class="form-control"
+          formControlName="cover"
+          placeholder="Cover"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            albumForm.get('cover')?.hasError('required') &&
+            albumForm.get('cover')?.touched
+          "
+        >
+          Cover required
+        </div>
+      </div>
       <!-- Release date -->
       <div class="form-group mx-sm-3 mb-2">
         <label for="releaseDate">releaseDate*</label>

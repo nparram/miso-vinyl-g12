@@ -5,8 +5,7 @@ import { PrizeListarComponent } from './prize/prize-listar/prize-listar.componen
 import { AlbumRoutes } from './album/album.routing';
 
 const routes: Routes = [
-  { path: 'performers/list', component: PerformerListarComponent },
-  { path: 'prizes/list', component: PrizeListarComponent }
+
 ];
 
 @NgModule({

@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { AlbumDetail } from './albumDetail';
-import { catchError } from 'rxjs/operators';
+import { catchError, tap } from 'rxjs/operators';
+import { Album } from './album';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,9 @@ import { catchError } from 'rxjs/operators';
 export class AlbumService {
 
   private apiUrl:string = environment.baseUrl + 'albums';
+  httpOptions = {
+    headers: new HttpHeaders({ "Content-Type": "application/json" })
+  };
 
   constructor(private http: HttpClient) { }
 
@@ -21,6 +25,11 @@ export class AlbumService {
         console.log(`En el servicio: ${err.error}`);
         return throwError(err);
       }));
+  }
+
+  createAlbum(newAlbum: Album): Observable<Album> {
+    return this.http.post<Album>(this.apiUrl, newAlbum, this.httpOptions)
+      .pipe(tap((album: Album) => console.log(`added album w/ ${album.name} id=${album.id}`)));
   }
 
 }

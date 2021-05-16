@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { ToastrService } from "ngx-toastr";
 import { Album } from '../album';
+import { AlbumService } from '../album.service';
 
 @Component({
   selector: 'app-album-create',
@@ -10,10 +11,12 @@ import { Album } from '../album';
 })
 export class AlbumCreateComponent implements OnInit {
   albumForm: FormGroup;
+  albumes: Album[];
 
   constructor(
     private formBuilder: FormBuilder,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private albumService: AlbumService
   ) {
 
    }
@@ -21,6 +24,7 @@ export class AlbumCreateComponent implements OnInit {
   ngOnInit() {
     this.albumForm = this.formBuilder.group({
       name: ["", [Validators.required]],
+      cover: ["", [Validators.required]],
       releaseDate: ["", [Validators.required]],
       description: ["", [Validators.required]],
       genre: ["", [Validators.required]],
@@ -29,12 +33,12 @@ export class AlbumCreateComponent implements OnInit {
   }
 
   createAlbum(newAlbum: Album){
-    //-----------------------------------------------------------------
-    // this.clientService.createClient(newClient).subscribe(client => {
-    //   this.clientes.push(client);
-    //  this.showSuccess(newClient);
-    // });
-    //------------------------------------------------------------------
+
+    this.albumService.createAlbum(newAlbum).subscribe(client => {
+      this.albumes.push(client);
+      this.showSuccess(newAlbum);
+    });
+
     this.showSuccess(newAlbum);
     this.albumForm.reset();
   }
