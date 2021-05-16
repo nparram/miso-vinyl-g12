@@ -1,0 +1,84 @@
+<div class="container-fluid">
+  <div class="col-4 p-3">
+    <div class="h4" >Prize Creation</div>
+
+    <form
+      [formGroup]="prizeForm"
+      (ngSubmit)="!prizeForm.invalid && createPrize(prizeForm.value)"
+
+
+    >
+
+
+      <!-- Name -->
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="name">Name*</label>
+        <input
+          novalidate
+          id="name"
+          class="form-control"
+          formControlName="name"
+          placeholder="Prize Name"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            prizeForm.get('name')?.hasError('required') &&
+            prizeForm.get('name')?.touched
+          "
+        >
+          Name required
+        </div>
+      </div>
+
+
+      <!-- Description -->
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="description">Description*</label>
+        <input
+          novalidate
+          id="description"
+          class="form-control"
+          formControlName="description"
+          placeholder="Description"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            prizeForm.get('description')?.hasError('required') &&
+            prizeForm.get('description')?.touched
+          "
+        >
+          Description
+        </div>
+      </div>
+
+
+      <!-- Organization -->
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="genre">Organization*</label>
+        <input
+          novalidate
+          id="organization"
+          class="form-control"
+          formControlName="organization"
+          placeholder="organization"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            prizeForm.get('organization')?.hasError('required') &&
+            prizeForm.get('organization')?.touched
+          "
+        >
+          Organization
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary"
+          [disabled]="!prizeForm.valid" >Create</button>
+        <button type="button" class="btn btn-danger ml-3"
+          (click)="cancelCreation()" >Cancel</button>
+    </form>
+  </div>
+</div>

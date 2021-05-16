@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Performer } from './performer';
-import { dataPerformers } from './dataPerformers';
+
+
+
 @Component({
   selector: 'app-performer',
   templateUrl: './performer.component.html',
@@ -8,14 +9,12 @@ import { dataPerformers } from './dataPerformers';
 })
 export class PerformerComponent implements OnInit {
 
+
   constructor() { }
-  performers: Array<Performer>;
-  getPerformerList(): Array<Performer> {
-    return dataPerformers;
-  }
+
 
   ngOnInit() {
-    this.performers = this.getPerformerList();
+
   }
 
 }
