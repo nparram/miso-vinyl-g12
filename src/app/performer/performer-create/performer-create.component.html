@@ -1,0 +1,96 @@
+<div class="container-fluid">
+  <div class="col-4 p-3">
+    <div class="h4" >Performer Creation</div>
+
+    <form
+      [formGroup]="performerForm"
+      (ngSubmit)="!performerForm.invalid && createPerformer(performerForm.value)"
+    >
+      <!-- Name -->
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="name">Name*</label>
+        <input
+          novalidate
+          id="name"
+          class="form-control"
+          formControlName="name"
+          placeholder="Performer Name"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            performerForm.get('name')?.hasError('required') &&
+            performerForm.get('name')?.touched
+          "
+        >
+          Name required
+        </div>
+      </div>
+      <!-- Birth date -->
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="birthDate">birthDate*</label>
+        <input
+          novalidate
+          id="birthDate"
+          class="form-control"
+          formControlName="birthDate"
+          placeholder="Birth Date"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            performerForm.get('birthDate')?.hasError('required') &&
+            performerForm.get('birthDate')?.touched
+          "
+        >
+          Birth Date required
+        </div>
+      </div>
+      <!-- Description -->
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="description">Description*</label>
+        <input
+          novalidate
+          id="description"
+          class="form-control"
+          formControlName="description"
+          placeholder="Description"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            performerForm.get('description')?.hasError('required') &&
+            performerForm.get('description')?.touched
+          "
+        >
+          Description
+        </div>
+      </div>
+      <!-- Image -->
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="image">Image*</label>
+        <input
+          novalidate
+          id="image"
+          class="form-control"
+          formControlName="image"
+          placeholder="Image"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            performerForm.get('image')?.hasError('required') &&
+            performerForm.get('image')?.touched
+          "
+        >
+          Image
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary"
+          [disabled]="!performerForm.valid" >Create</button>
+        <button type="button" class="btn btn-danger ml-3"
+          (click)="cancelCreation()" >Cancel</button>
+    </form>
+  </div>
+</div>
