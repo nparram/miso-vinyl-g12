@@ -1,3 +1,20 @@
-<div><a href="albums/add">Create Album</a></div>
-<app-album-listar></app-album-listar>
+<div>
+  <a class="nav-link active"
+    routerLink="add"
+    routerLinkActive="active">
+    Create Album
+  </a>
+</div>
+
+<!-- [{ outlets: { bottom: ['add'] } }], {relativeTo: this.route.parent} -->
+<div id="contentAlbum" class="container-fluid">
+  <div class="row border">
+    <div class="col-2">
+      <app-album-listar></app-album-listar>
+    </div>
+    <div class="col-10 border">
+      <router-outlet ></router-outlet>
+    </div>
+  </div>
+</div>
 

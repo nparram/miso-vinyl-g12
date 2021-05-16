@@ -12,15 +12,16 @@ const routes: Routes = [
     children: [
       {
         path: 'list',
-        component: AlbumListarComponent
-      },
-      {
-        path: ':id',
-        component: AlbumDetailComponent
+        component: AlbumListarComponent,
+        outlet: 'bottom'
       },
       {
         path: 'add',
         component: AlbumCreateComponent
+      },
+      {
+        path: ':id',
+        component: AlbumDetailComponent
       }
     ]
   }

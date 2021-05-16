@@ -6,12 +6,14 @@ import { AlbumDetailComponent } from './album-detail/album-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AlbumCreateComponent } from './album-create/album-create.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   declarations: [
     AlbumComponent,
