@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="col-4 p-3">
-    <div class="h4" >Prize Creation</div>
+    <div class="h4" i18n>Prize Creation</div>
 
     <form
       [formGroup]="prizeForm"
@@ -12,13 +12,13 @@
 
       <!-- Name -->
       <div class="form-group mx-sm-3 mb-2">
-        <label for="name">Name*</label>
+        <label for="name" i18n>Name*</label>
         <input
           novalidate
           id="name"
           class="form-control"
           formControlName="name"
-          placeholder="Prize Name"
+          i18n-placeholder placeholder="Name"
         />
         <div
           class="alert alert-danger alert-dismissible fade show"
@@ -34,13 +34,13 @@
 
       <!-- Description -->
       <div class="form-group mx-sm-3 mb-2">
-        <label for="description">Description*</label>
+        <label for="description" i18n>Description*</label>
         <input
           novalidate
           id="description"
           class="form-control"
           formControlName="description"
-          placeholder="Description"
+          i18n-placeholder placeholder="Description"
         />
         <div
           class="alert alert-danger alert-dismissible fade show"
@@ -56,13 +56,13 @@
 
       <!-- Organization -->
       <div class="form-group mx-sm-3 mb-2">
-        <label for="genre">Organization*</label>
+        <label for="organization" i18n>Organization*</label>
         <input
           novalidate
           id="organization"
           class="form-control"
           formControlName="organization"
-          placeholder="organization"
+          i18n-placeholder placeholder="Organization"
         />
         <div
           class="alert alert-danger alert-dismissible fade show"
@@ -76,9 +76,9 @@
       </div>
 
       <button type="submit" class="btn btn-primary"
-          [disabled]="!prizeForm.valid" >Create</button>
+          [disabled]="!prizeForm.valid" i18n>Create</button>
         <button type="button" class="btn btn-danger ml-3"
-          (click)="cancelCreation()" >Cancel</button>
+          (click)="cancelCreation()" i18n>Cancel</button>
     </form>
   </div>
 </div>

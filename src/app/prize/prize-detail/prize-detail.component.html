@@ -1,19 +1,19 @@
 <div class="container-fluid">
   <dl>
-    <dt> Organization</dt>
+    <dt i18n> Organization</dt>
     <dd>{{prizeDetail.organization}}</dd>
   </dl>
 
   <div class="col">
     <dl>
-      <dt> Description</dt>
+      <dt i18n> Description</dt>
       <dd>{{prizeDetail.description}}</dd>
     </dl>
   </div>
   <div class="col">
     <dl>
       <hr>
-        <dt> Performer Prizes Date</dt>
+        <dt i18n> Performer Prizes Date</dt>
         <dd *ngFor = "let a of prizeDetail.performerPrizes">{{strToDate(a.premiationDate) |date:"longDate"}}</dd>
         <dt> ID</dt>
         <dd>{{prizeDetail.id}}</dd>
