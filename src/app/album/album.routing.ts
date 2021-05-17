@@ -12,8 +12,7 @@ const routes: Routes = [
     children: [
       {
         path: 'list',
-        component: AlbumListarComponent,
-        outlet: 'bottom'
+        component: AlbumListarComponent
       },
       {
         path: 'add',

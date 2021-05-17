@@ -9,11 +9,12 @@ import { Album } from '../album';
 export class AlbumDetailComponent implements OnInit {
 
   @Input() albumDetail: Album;
+  @Input() id: number;
 
-  constructor() { }
+  constructor() { console.log(this.id); }
 
   ngOnInit() {
-    //console.log(this.albumDetail.id);
+    console.log(this.id);
   }
 
 }

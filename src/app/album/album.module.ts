@@ -25,6 +25,7 @@ import { AppRoutingModule } from '../app-routing.module';
   exports: [
     AlbumComponent,
     AlbumListarComponent,
+    AlbumDetailComponent,
     AlbumCreateComponent
   ]
 })
