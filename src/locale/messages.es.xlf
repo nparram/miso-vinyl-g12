@@ -28,6 +28,14 @@
           <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="37a750182b4e4604bcc5c232d8c485c4721cd80d" datatype="html">
+        <source>Album Name</source>
+        <target>Nombre de album</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/album/album-create/album-create.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="f500c1453ddb9d398339938368320d6e2686c5f5" datatype="html">
         <source>
           Name required
@@ -44,6 +52,14 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/album/album-create/album-create.component.html</context>
           <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="27bb15060830a88d4e46810456af81fdd6262427" datatype="html">
+        <source>Cover</source>
+        <target>Carátula</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/album/album-create/album-create.component.html</context>
+          <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="16a6f69f1a6b641e667f7993bfec626912a3d536" datatype="html">
@@ -98,6 +114,14 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/album/album-create/album-create.component.html</context>
           <context context-type="linenumber">95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="81b090ca8b0d1629d26b369ac21fa7c4d3191c0f" datatype="html">
+        <source>Genre</source>
+        <target>Género</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/album/album-create/album-create.component.html</context>
+          <context context-type="linenumber">100</context>
         </context-group>
       </trans-unit>
       <trans-unit id="754b3a8db557084117761c81e834971404e7cd81" datatype="html">
