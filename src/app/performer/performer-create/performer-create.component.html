@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="col-4 p-3">
-    <div class="h4" >Performer Creation</div>
+    <div class="h4" i18n>Performer Creation</div>
 
     <form
       [formGroup]="performerForm"
@@ -8,13 +8,13 @@
     >
       <!-- Name -->
       <div class="form-group mx-sm-3 mb-2">
-        <label for="name">Name*</label>
+        <label for="name"i18n >Name*</label>
         <input
           novalidate
           id="name"
           class="form-control"
           formControlName="name"
-          placeholder="Performer Name"
+          i18n-placeholder placeholder="Performer Name"
         />
         <div
           class="alert alert-danger alert-dismissible fade show"
@@ -28,13 +28,14 @@
       </div>
       <!-- Birth date -->
       <div class="form-group mx-sm-3 mb-2">
-        <label for="birthDate">birthDate*</label>
+        <label for="birthDate" i18n>birthDate*</label>
         <input
           novalidate
           id="birthDate"
           class="form-control"
           formControlName="birthDate"
-          placeholder="Birth Date"
+          i18n-placeholder placeholder="Birth Date"
+
         />
         <div
           class="alert alert-danger alert-dismissible fade show"
@@ -48,13 +49,14 @@
       </div>
       <!-- Description -->
       <div class="form-group mx-sm-3 mb-2">
-        <label for="description">Description*</label>
+        <label for="description" i18n>Description*</label>
         <input
           novalidate
           id="description"
           class="form-control"
           formControlName="description"
-          placeholder="Description"
+          i18n-placeholder placeholder="Description"
+
         />
         <div
           class="alert alert-danger alert-dismissible fade show"
@@ -68,13 +70,13 @@
       </div>
       <!-- Image -->
       <div class="form-group mx-sm-3 mb-2">
-        <label for="image">Image*</label>
+        <label for="image" i18n>Image*</label>
         <input
           novalidate
           id="image"
           class="form-control"
           formControlName="image"
-          placeholder="Image"
+          i18n-placeholder placeholder="Image"
         />
         <div
           class="alert alert-danger alert-dismissible fade show"
@@ -88,9 +90,9 @@
       </div>
 
       <button type="submit" class="btn btn-primary"
-          [disabled]="!performerForm.valid" >Create</button>
+          [disabled]="!performerForm.valid" i18n>Create</button>
         <button type="button" class="btn btn-danger ml-3"
-          (click)="cancelCreation()" >Cancel</button>
+          (click)="cancelCreation()" i18n>Cancel</button>
     </form>
   </div>
 </div>

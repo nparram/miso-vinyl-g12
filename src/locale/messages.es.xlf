@@ -81,6 +81,12 @@
           <context context-type="sourcefile">src/app/album/album-create/album-create.component.html</context>
           <context context-type="linenumber">74</context>
         </context-group>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/performer/performer-create/performer-create.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+
       </trans-unit>
       <trans-unit id="c2e176e60836e80651ab7d1d6301b0ee9f3bc85e" datatype="html">
         <source>
@@ -130,19 +136,31 @@
       </trans-unit>
       <trans-unit id="70a67e04629f6d412db0a12d51820b480788d795" datatype="html">
         <source>Create</source>
-        <source>Crear</source>
+        <target>Crear</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/album/album-create/album-create.component.html</context>
           <context context-type="linenumber">137</context>
         </context-group>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/performer/performer-create/performer-create.component.html</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+
       </trans-unit>
       <trans-unit id="d7b35c384aecd25a516200d6921836374613dfe7" datatype="html">
         <source>Cancel</source>
-        <source>Cancelar</source>
+        <target>Cancelar</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/album/album-create/album-create.component.html</context>
           <context context-type="linenumber">139</context>
         </context-group>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/performer/performer-create/performer-create.component.html</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+
       </trans-unit>
       <trans-unit id="7b07cc6126aa22c8a3041963963e85a0791a7e40" datatype="html">
         <source> Name</source>
@@ -151,6 +169,12 @@
           <context context-type="sourcefile">src/app/album/album-detail/album-detail.component.html</context>
           <context context-type="linenumber">11</context>
         </context-group>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/performer/performer-detail/performer-detail.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+
       </trans-unit>
       <trans-unit id="83be9e93de52bc845e11e48dddd1aec8627e1923" datatype="html">
         <source> Genre</source>
@@ -184,6 +208,128 @@
           <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
+
+    <!-- Inicio Bloque Traduccion Performers -->
+
+
+      <trans-unit id="9a43953be7090be8be34be969d7ab558a3bd3768" datatype="html">
+        <source> Id Performers</source>
+        <target>Id Cantantes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/performer/performer-detail/performer-detail.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="3909338c4bd606fae7ba39a4d80533aa94514241" datatype="html">
+        <source>BirthDate</source>
+        <target>Fecha de Nacimiento</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/performer/performer-detail/performer-detail.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="c9f2b1aca7c68db1327fff829d8e5e059897ef31" datatype="html">
+        <source>Image*</source>
+        <target>Imagen*</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/performer/performer-create/performer-create.component.html</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="37a750182b4e4604bcc5c232d8c485c4721cd80d" datatype="html">
+        <source>Album Name</source>
+        <target>Nombre del Album</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/performer/performer-detail/performer-detail.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="99dc4d30918a8708080338da15e334327b9634c9" datatype="html">
+        <source>Performer Creation</source>
+        <target>Creacion Musico</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/performer/performer-create/performer-create.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="94e6cf4369a94e51687fd6472b695baec328dc0e" datatype="html">
+        <source>birthDate*</source>
+        <target>fecha de nacimiento*</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/performer/performer-create/performer-create.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="a8f2969785488533c7911b73de1b2005c4c5728d" datatype="html">
+        <source> Performer Prizes Date</source>
+        <target> Fecha de Premio musico</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/performer/performer-detail/performer-detail.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="c7b9dabe8eae521d3c6f82a7a45af5549ed7c85f" datatype="html">
+        <source>
+          Description
+        </source>
+        <target>
+          Descripcion
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/performer/performer-create/performer-create.component.html</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="c83132944fe82ff1cdadf6359d3e43eb45a4731e" datatype="html">
+        <source>
+    Create Performers
+        </source>
+        <target>
+    Creacion Musicos
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/performer/performer.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="cb5e05a06da1fa1ad1c6a6a17f98f8c98b96b1cb" datatype="html">
+        <source>Performer Name</source>
+        <target>Nombre Musico</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/performer/performer-create/performer-create.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="c7958d835569ddb937a9c522e2505b9d86468ca5" datatype="html">
+        <source>Birth Date</source>
+        <target>Fecha de Nacimiento</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/performer/performer-create/performer-create.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="a5f9ba9bb9faa8284bcadb1cdbc6aaf969e9c4bb" datatype="html">
+        <source>Image</source>
+        <target>Imagen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/performer/performer-create/performer-create.component.html</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+      </trans-unit>
+
+    <!-- Final Bloque Traduccion Performers -->
+
     </body>
   </file>
 </xliff>
