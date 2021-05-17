@@ -5,6 +5,7 @@
         class="img-fluid"
         src='{{a.cover}}'
         alt='Caratula disco {{a.name}}'
+        (click)="onSelected(a)"
         [routerLink]="[a.id]"
       />
       <figcaption class="title-caption text-center">
@@ -15,6 +16,6 @@
 
 <!--
   <div *ngIf="selected">
-        <app-album-detail [albumDetail] = "selectedAlbum"></app-album-detail>
+        <app-album-detail [albumDetail] = "selectedAlbum" ></app-album-detail>
       </div>
 -->
