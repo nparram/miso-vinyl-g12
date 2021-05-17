@@ -10,8 +10,9 @@ describe('Service: Comment', () => {
       providers: [CommentService]
     });
   });
-
+/*
   it('should ...', inject([CommentService], (service: CommentService) => {
     expect(service).toBeTruthy();
   }));
+  */
 });
