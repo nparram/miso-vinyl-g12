@@ -2,14 +2,13 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { AlbumDetail } from './albumDetail';
 import { catchError, tap } from 'rxjs/operators';
-import { Album } from './album';
+import { Comment } from './comment';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AlbumService {
+export class CommentService {
 
   private apiUrl:string = environment.baseUrl + 'albums';
   httpOptions = {
@@ -18,18 +17,20 @@ export class AlbumService {
 
   constructor(private http: HttpClient) { }
 
-  getAlbums(): Observable<Array<AlbumDetail>> {
-
-    return this.http.get<Array<AlbumDetail>>(this.apiUrl).pipe(
+  getCommentsByAlbum(idAlbum: number): Observable<Array<Comment>> {
+    let urlService = this.apiUrl + '/' + idAlbum + '/comments'
+    return this.http.get<Array<Comment>>(urlService).pipe(
       catchError(err => {
         console.log(`En el servicio: ${err.error}`);
         return throwError(err);
       }));
+
   }
 
-  createAlbum(newAlbum: Album): Observable<Album> {
-    return this.http.post<Album>(this.apiUrl, newAlbum, this.httpOptions)
-      .pipe(tap((album: Album) => console.log(`added album w/ ${album.name} id=${album.id}`)));
+  createCommentInAlbum(newComment: Comment, idAlbum: number): Observable<Comment> {
+    let urlService = this.apiUrl + '/' + idAlbum + '/comments'
+    return this.http.post<Comment>(urlService, newComment, this.httpOptions)
+      .pipe(tap((comment: Comment) => console.log(`added comment w/ id=${comment.id}`)));
   }
 
 }

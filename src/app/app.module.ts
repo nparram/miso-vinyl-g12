@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PerformerModule } from './performer/performer.module';
 import { AlbumModule } from './album/album.module';
+import { CommentModule } from './comment/comment.module';
 import { HttpErrorInterceptor } from './interceptors/http-error-interceptor.service'
 
 import { PrizeModule } from './prize/prize.module';
@@ -23,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PerformerModule,
     AlbumModule,
     PrizeModule,
+    CommentModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule
   ],
