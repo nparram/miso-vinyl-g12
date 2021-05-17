@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="col-4 p-3">
-    <div class="h4" >Album Creation</div>
+    <div class="h4" i18n>Album Creation</div>
 
     <form
       [formGroup]="albumForm"
@@ -8,7 +8,7 @@
     >
       <!-- Name -->
       <div class="form-group mx-sm-3 mb-2">
-        <label for="name">Name*</label>
+        <label for="name" i18n>Name*</label>
         <input
           novalidate
           id="name"
@@ -22,13 +22,14 @@
             albumForm.get('name')?.hasError('required') &&
             albumForm.get('name')?.touched
           "
+          i18n
         >
           Name required
         </div>
       </div>
       <!-- Cover -->
       <div class="form-group mx-sm-3 mb-2">
-        <label for="cover">Cover*</label>
+        <label for="cover" i18n>Cover*</label>
         <input
           novalidate
           id="cover"
@@ -42,13 +43,14 @@
             albumForm.get('cover')?.hasError('required') &&
             albumForm.get('cover')?.touched
           "
+          i18n
         >
           Cover required
         </div>
       </div>
       <!-- Release date -->
       <div class="form-group mx-sm-3 mb-2">
-        <label for="releaseDate">releaseDate*</label>
+        <label for="releaseDate" i18n>Release Date*</label>
         <input
           novalidate
           id="releaseDate"
@@ -62,13 +64,14 @@
             albumForm.get('releaseDate')?.hasError('required') &&
             albumForm.get('releaseDate')?.touched
           "
+          i18n
         >
           Release Date required
         </div>
       </div>
       <!-- Description -->
       <div class="form-group mx-sm-3 mb-2">
-        <label for="description">Description*</label>
+        <label for="description" i18n>Description*</label>
         <input
           novalidate
           id="description"
@@ -82,13 +85,14 @@
             albumForm.get('description')?.hasError('required') &&
             albumForm.get('description')?.touched
           "
+          i18n
         >
-          Description
+          Description required
         </div>
       </div>
       <!-- Genre -->
       <div class="form-group mx-sm-3 mb-2">
-        <label for="genre">Genre*</label>
+        <label for="genre" i18n>Genre*</label>
         <input
           novalidate
           id="genre"
@@ -102,13 +106,14 @@
             albumForm.get('genre')?.hasError('required') &&
             albumForm.get('genre')?.touched
           "
+          i18n
         >
-          Genre
+          Genre required
         </div>
       </div>
       <!-- RecordLabel -->
       <div class="form-group mx-sm-3 mb-2">
-        <label for="recordLabel">Record Label*</label>
+        <label for="recordLabel" i18n>Record Label*</label>
         <input
           novalidate
           id="recordLabel"
@@ -122,15 +127,16 @@
             albumForm.get('recordLabel')?.hasError('required') &&
             albumForm.get('recordLabel')?.touched
           "
+          i18n
         >
-          Record Label
+          Record Label required
         </div>
       </div>
 
       <button type="submit" class="btn btn-primary"
-          [disabled]="!albumForm.valid" >Create</button>
+          [disabled]="!albumForm.valid" i18n>Create</button>
         <button type="button" class="btn btn-danger ml-3"
-          (click)="cancelCreation()" >Cancel</button>
+          (click)="cancelCreation()" i18n>Cancel</button>
     </form>
   </div>
 </div>
