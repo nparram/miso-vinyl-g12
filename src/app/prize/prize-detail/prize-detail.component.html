@@ -1,25 +1,22 @@
 <div class="container-fluid">
+  <dl>
+    <dt i18n> Organization</dt>
+    <dd>{{prizeDetail.organization}}</dd>
+  </dl>
 
-
-  <dt> Organization</dt>
-      <dd>{{prizeDetail.organization}}</dd>
-
-    <div class="col">
-      <dt> Description</dt>
+  <div class="col">
+    <dl>
+      <dt i18n> Description</dt>
       <dd>{{prizeDetail.description}}</dd>
-    </div>
-
-    <div class="col">
-      <dl>
-        <hr>
-        <dt> Performer Prizes Date</dt>
+    </dl>
+  </div>
+  <div class="col">
+    <dl>
+      <hr>
+        <dt i18n> Performer Prizes Date</dt>
         <dd *ngFor = "let a of prizeDetail.performerPrizes">{{strToDate(a.premiationDate) |date:"longDate"}}</dd>
-
         <dt> ID</dt>
         <dd>{{prizeDetail.id}}</dd>
-
-      </dl>
-    </div>
-
-
+    </dl>
+  </div>
 </div>

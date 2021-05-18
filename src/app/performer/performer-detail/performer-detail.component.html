@@ -1,23 +1,23 @@
-<div class="container-fluid">
+<div id="contentPerformer" class="container-fluid">
   <p class="h3 p-3">{{performerDetail.name}}</p>
   <div class="row">
     <div class="col-2">
       <div class="thumb">
-        <img class="img-fluid" src="{{performerDetail.image}}" />
+        <img class="img-fluid" src="{{performerDetail.image}}" alt="Foto Cantante {{performerDetail.name}}" title = "Fotografia cantante seleccionado" />
       </div>
     </div>
 
     <div class="col">
       <dl>
-        <dt> Id Performers</dt>
+        <dt i18n> Id Performers</dt>
         <dd>{{performerDetail.id}}</dd>
-        <dt> Name</dt>
+        <dt i18n> Name</dt>
         <dd>{{performerDetail.name}}</dd>
         <hr>
-        <dt>BirthDate</dt>
+        <dt i18n>BirthDate</dt>
         <dd>{{ performerDetail.birthDate |date:"longDate"}}</dd>
         <hr>
-        <dt class="Description">Description</dt>
+        <dt class="Description" i18n>Description</dt>
         <dd>{{performerDetail.description}}</dd>
         <hr>
       </dl>
@@ -25,11 +25,11 @@
 
     <div class="col-2">
       <div class="thumb">
-        <dd *ngFor = "let c of performerDetail.albums"><img class="img-fluid" src="{{c.cover}}" >
+        <dd *ngFor = "let c of performerDetail.albums"><img class="img-fluid" src="{{c.cover}}" alt="Caratula Album {{c.name}}">
           <div class="col">
             <dl>
 
-              <dt>Album Name</dt>
+              <dt i18n>Album Name</dt>
               <dd>{{c.name}}</dd>
               <dd>{{c.recordLabel}}</dd>
               <dd>{{c.releaseDate |date:"longDate"}}
@@ -44,7 +44,7 @@
     <div class="col">
       <dl>
         <hr>
-        <dt> Performer Prizes Date</dt>
+        <dt i18n> Performer Prizes Date</dt>
         <dd *ngFor = "let a of performerDetail.performerPrizes">{{a.premiationDate |date:"longDate"}}</dd>
       </dl>
     </div>

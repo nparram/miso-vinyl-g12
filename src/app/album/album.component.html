@@ -1,1 +1,22 @@
-<app-album-listar></app-album-listar>
+<div>
+  <a class="nav-link active"
+    [routerLink]="['add']"
+    routerLinkActive="active"
+    i18n
+  >
+    Create Album
+  </a>
+</div>
+
+<div id="contentAlbum" class="container-fluid">
+  <div class="row border">
+    <div class="col-2">
+      <app-album-listar></app-album-listar>
+    </div>
+    <div class="col-10 border">
+      <router-outlet ></router-outlet>
+    </div>
+  </div>
+</div>
+
+

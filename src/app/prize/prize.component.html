@@ -1,3 +1,19 @@
-<p>
-  prize works!  Prizes!!
-</p>
+<div>
+  <a class="nav-link active"
+    routerLink="add"
+    routerLinkActive="active" i18n>
+    Create Prize
+  </a>
+</div>
+
+<!-- [{ outlets: { bottom: ['add'] } }], {relativeTo: this.route.parent} -->
+<div id="contentPrize" class="container-fluid">
+  <div class="row border">
+    <div class="col-2">
+      <app-prize-listar></app-prize-listar>
+    </div>
+    <div class="col-10 border">
+      <router-outlet ></router-outlet>
+    </div>
+  </div>
+</div>

@@ -1,16 +1,50 @@
 
-<div>
-  <h1>Lista de Albumes</h1>
-  <app-album></app-album>
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <a class="navbar-brand" href="#">
+    <div class="form-inline">
+      <img id="logo" src="../assets/EdisonPhonograph.jpg" class="center-block" width="100" height="100" alt="Logo de la aplicacion."/>
+      <div class="col">
+        <div class="row-sm-4">
+          <h2 class="mainTitle f1">VynilRecords </h2>
+        </div>
+        <div class="row-sm-3">
+          <h5 class="mainTitle f1">For old people</h5>
+        </div>
+      </div>
+    </div>
+  </a>
+
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Menu a recursos principales -->
+  <div class="navbar-nav mr-auto mt-0">
+    <a id="albums-navbar-item" class="nav-item nav-link" routerLink="/albums" i18n>Albums</a>
+    <a id="performers-navbar-item" class="nav-item nav-link" routerLink="/performers" i18n>Performers</a>
+    <a id="prizes-navbar-item" class="nav-item nav-link" routerLink="/prizes" i18n>Prizes</a>
+  </div>
+
+</nav>
+
+<!-- Main Router Outlet -->
+<div class="container-fluid" id="principal">
+  <div class="row">
+    <div class="col">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>
 
-<div>
-  <h1>Lista de Musicos</h1>
-  <app-performer-listar></app-performer-listar>
-</div>
-
-<div>
-  <h1>Lista de Premios</h1>
-  <app-prize-listar></app-prize-listar>
-</div>
+<!-- Footer -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <p class="navbar-text text-center">
+      <img src="../assets/EdisonPhonograph.jpg" alt="logo pie de pagina" width="8%" /><span id="footer-text">© Grupo 12 </span>
+      <a routerLink="/">Vynil</a>
+    </p>
+  </div>
+</footer>
 

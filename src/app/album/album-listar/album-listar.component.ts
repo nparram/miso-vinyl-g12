@@ -19,7 +19,9 @@ export class AlbumListarComponent implements OnInit {
   getAlbums(): void {
     this.albumService.getAlbums()
     .subscribe(albums => {
-      this.albums = albums;
+      this.albums = albums,
+      error => console.log(`Error: ${error.error}`),
+      () => console.log('Termino la ejecución')
     });
   }
 

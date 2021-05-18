@@ -1,31 +1,20 @@
 
 
-<div class="container-fluid">
-  <div class="col-2">
-    <table class="table">
-      <thead>
-        <tr>
-          <th class="h4">Performer´s Name</th>
-          <th class="h4"> </th>
-        </tr>
-      </thead>
-      <tbody>
-        <div class="col" *ngFor="let b of performers">
+<div id="contentPerformer" class="container-fluid">
+  <div class="row border"></div>
+    <div class="col-2">
+      <div class="col" *ngFor="let b of performers">
           <figure class="figure">
-              <img class="img-fluid" src='{{b.image}}'(click)="onSelected(b)"/>
+              <img class="img-fluid" src='{{b.image}}' alt="Foto Cantante {{b.name}}" title = "Fotografia cantante seleccionado" (click)="onSelected(b)"/>
               <figcaption class="title-caption text-center">{{b.name}}</figcaption>
           </figure>
       </div>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-<div class="row p-3">
-  <div class="col border">
-    <div *ngIf="selected">
-      <app-performer-detail [performerDetail]="selectedPerformer"></app-performer-detail>
     </div>
-  </div>
-</div>
 
+
+    <div class="col-10 border">
+      <div *ngIf="selected">
+        <app-performer-detail [performerDetail]="selectedPerformer"></app-performer-detail>
+      </div>
+    </div>
+</div>

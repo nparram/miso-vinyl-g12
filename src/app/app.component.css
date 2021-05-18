@@ -1,0 +1,51 @@
+#cuerpo{
+  background-color: #FFC58D;
+}
+h2 {
+  color: hsl(224, 48%, 43%);
+}
+
+nav{
+  background-color: white;
+  border: 2px solid white;
+}
+
+#albums-navbar-item{
+  color: hsl(224, 48%, 43%);
+}
+
+#performers-navbar-item{
+  color:hsl(224, 48%, 43%);
+}
+
+#prizes-navbar-item{
+  color: hsl(224, 48%, 43%);
+}
+
+h5{
+  color:hsl(224, 48%, 43%);
+}
+
+#textWhite{
+  color:rgb(20, 17, 17);
+}
+
+#navbarDropdown{
+  color: hsl(224, 48%, 43%);
+}
+
+#principal{
+  background-color: #EBEFF2;
+
+}
+#secundaria {
+  background-color:#76919C;
+}
+
+#footer {
+  color: hsl(224, 48%, 43%);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}

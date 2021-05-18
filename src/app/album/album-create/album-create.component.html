@@ -1,0 +1,140 @@
+<div class="container-fluid">
+    <div class="h4" i18n>Album Creation</div>
+
+    <form
+      [formGroup]="albumForm"
+      (ngSubmit)="!albumForm.invalid && createAlbum(albumForm.value)"
+    >
+      <!-- Name -->
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="name" i18n>Name*</label>
+        <input
+          novalidate
+          id="name"
+          class="form-control"
+          formControlName="name"
+          i18n-placeholder placeholder="Album Name"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            albumForm.get('name')?.hasError('required') &&
+            albumForm.get('name')?.touched
+          "
+          i18n
+        >
+          Name required
+        </div>
+      </div>
+      <!-- Cover -->
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="cover" i18n>Cover*</label>
+        <input
+          novalidate
+          id="cover"
+          class="form-control"
+          formControlName="cover"
+          i18n-placeholder placeholder="Cover"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            albumForm.get('cover')?.hasError('required') &&
+            albumForm.get('cover')?.touched
+          "
+          i18n
+        >
+          Cover required
+        </div>
+      </div>
+      <!-- Release date -->
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="releaseDate" i18n>Release Date*</label>
+        <input
+          novalidate
+          id="releaseDate"
+          class="form-control"
+          formControlName="releaseDate"
+          i18n-placeholder placeholder="Release Date"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            albumForm.get('releaseDate')?.hasError('required') &&
+            albumForm.get('releaseDate')?.touched
+          "
+          i18n
+        >
+          Release Date required
+        </div>
+      </div>
+      <!-- Description -->
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="description" i18n>Description*</label>
+        <input
+          novalidate
+          id="description"
+          class="form-control"
+          formControlName="description"
+          i18n-placeholder placeholder="Description"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            albumForm.get('description')?.hasError('required') &&
+            albumForm.get('description')?.touched
+          "
+          i18n
+        >
+          Description required
+        </div>
+      </div>
+      <!-- Genre -->
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="genre" i18n>Genre*</label>
+        <input
+          novalidate
+          id="genre"
+          class="form-control"
+          formControlName="genre"
+          i18n-placeholder placeholder="Genre"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            albumForm.get('genre')?.hasError('required') &&
+            albumForm.get('genre')?.touched
+          "
+          i18n
+        >
+          Genre required
+        </div>
+      </div>
+      <!-- RecordLabel -->
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="recordLabel" i18n>Record Label*</label>
+        <input
+          novalidate
+          id="recordLabel"
+          class="form-control"
+          formControlName="recordLabel"
+          i18n-placeholder placeholder="Record Label"
+        />
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="
+            albumForm.get('recordLabel')?.hasError('required') &&
+            albumForm.get('recordLabel')?.touched
+          "
+          i18n
+        >
+          Record Label required
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary"
+          [disabled]="!albumForm.valid" i18n>Create</button>
+        <button type="button" class="btn btn-danger ml-3"
+          (click)="cancelCreation()" i18n>Cancel</button>
+    </form>
+</div>

@@ -1,18 +1,21 @@
-<div class="container-fluid">
-  <div class="row border">
-    <div class="col-2">
-      <div class="row" *ngFor="let a of albums">
-          <figure class="figure ">
-              <img class="img-fluid" src='{{a.cover}}' (click)="onSelected(a)"/>
-              <figcaption class="title-caption text-center">{{a.name}}. [{{a.recordLabel}}]</figcaption>
-          </figure>
-      </div>
-    </div>
-    <div class="col-10 border">
-      <div *ngIf="selected">
-        <app-album-detail [albumDetail] = "selectedAlbum"></app-album-detail>
-      </div>
-    </div>
-  </div>
+
+<div class="row" *ngFor="let a of albums">
+  <figure class="figure">
+      <img
+        class="img-fluid"
+        src='{{a.cover}}'
+        alt='Caratula disco {{a.name}}'
+        (click)="onSelected(a)"
+        [routerLink]="[a.id]"
+      />
+      <figcaption class="title-caption text-center">
+        {{a.name}}. [{{a.recordLabel}}]
+      </figcaption>
+  </figure>
 </div>
 
+<!--
+  <div *ngIf="selected">
+        <app-album-detail [albumDetail] = "selectedAlbum" ></app-album-detail>
+      </div>
+-->
